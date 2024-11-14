@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures body takes full height */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Existing styles */
+    background: linear-gradient(135deg, #b0c7f5, #4a4e84);
+    color: white;
+    padding-bottom: 100px; /* Space for scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Adds padding around header content */
+}
+
+header h1 {
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Profile Section */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-section,
+.about-section {
+    width: 48%;
+}
+
+.profile-section {
+    background-color: #353458;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.custom-profile-card {
+    background-color: #716d98; /* Using your website's color scheme */
+    color: #353458;
+    text-align: center;
+    padding: 40px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+/* Profile Image Container (Larger Circle) */
+.custom-profile-card .profile-image {
+    width: 150px; /* Increased size of the circular container */
+    height: 150px;
+    background-color: white; /* Background for transparency */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image Inside the Circle with Zoom Effect */
+.custom-profile-card .profile-image img {
+    width: 100%; /* Ensure the image takes up the full container width */
+    height: 100%; /* Ensure the image takes up the full container height */
+    object-fit: cover; /* Ensures the image fills the container */
+    object-position: center; /* Centers the image within the circle */
+    transform: scale(1.3); /* Zoom in the image by 30% */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+}
+
+/* Optional: Hover effect to zoom further on hover */
+.custom-profile-card .profile-image:hover img {
+    transform: scale(1.4); /* Zoom further when hovered */
+}
+
+ 
+.custom-profile-card h2 {
+    font-size: 1.5em;
+    color: white; /* White text for contrast */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.custom-profile-card .title {
+    font-size: 0.9em;
+    color: #353458; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.custom-profile-card .divider {
+    width: 50px;
+    height: 2px;
+    background-color: #b0c7f5; /* Accent color */
+    border: none;
+    margin: 10px auto;
+}
+
+.custom-profile-card .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.custom-profile-card .social-icons a {
+    color: #353458; /* Dark color for social icons */
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-profile-card .social-icons a:hover {
+    color: #8a9ee6; /* Slightly lighter color on hover */
+}
+
+.social-links {
+    margin-top: 10px; /* Adds space above the LinkedIn icon */
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+.about-section h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-right: 10px;
+}
+.about-me-button-container {
+    margin-top: 20px; /* Adds space above the button for aesthetics */
+    display: flex;
+    justify-content: center; /* Centers the button */
+}
+
+.about-me-button {
+    background-color: #b0c7f5; /* Color similar to the project button */
+    border: none;
+    color: #353458;
+    padding: 10px 20px; /* Adds padding for better button size */
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+    max-width: 200px; /* Ensures a consistent button width */
+}
+
+/* Hover effect */
+.about-me-button:hover {
+    background-color: #8a9ee6;
+}
+
+/* My Work and Projects Section */
+.my-work-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Ensures some space between the two sections */
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.work-content,
+.projects-section {
+    width: 48%;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box; /* Avoid extra width due to padding */
+}
+
+.work-content {
+    background-color: #b0c7f5;
+    color: #353458;
+}
+
+/* Set a minimum height for both sections to align their lengths */
+.my-work-section,
+.projects-section {
+    min-height: 300px; /* Adjust this value as needed */
+}
+/* Flexbox for .my-work-section to align child items */
+.work-content h2 {
+    margin-bottom: 20px; /* Adjust the value to control the space */
+}
+
+.work-content p {
+    margin: 10px 0; /* Optional: Adds space between paragraphs */
+}
+.my-work-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures sections take equal height */
+}
+.projects-section {
+    background-color: #353458;
+    color: white;
+}
+
+.project-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.project-buttons a {
+    background-color: #b0c7f5; /* Original color for project buttons */
+    border: none;
+    color: #353458;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Prevents overly wide buttons on large screens */
+    font-size: 1.1em; /* Optional: Adjust font size for consistency */
+}
+
+/* Hover effect for Project Buttons */
+.project-buttons a:hover {
+    background-color: #8a9ee6;
+}
+.fine-art-button {
+      background-color: #353458; /* Separate color for project-option buttons */
+    border: none;
+    color: #b0c7f5;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1em;
+}
+
+/* Hover effect */
+.fine-art-button:hover {
+    background-color: #8a9ee6;
+}
+
+.additional-projects-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #b0c7f5;
+    color: #353458;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 2em;
+    color: #353458;
+    margin-bottom: 20px;
+}
+
+.project-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-options .project-option {
+    background-color: #353458; /* Separate color for project-option buttons */
+    border: none;
+    color: #b0c7f5;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1em;
+}
+
+/* Hover effect for .project-options buttons */
+.project-options .project-option:hover {
+    background-color: #8a9ee6;
+}
+
+.quote-section {
+    width: 45%;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-footer {
+    background-color: white;
+    color: #353458;
+    padding: 7px 0; /* Reduce padding to make it thinner */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.6em; /* Slightly smaller font size */
+    border-top: 0.7px solid #353458; /* Thin border at the top */
+    justify-content: center; /* Centers content horizontally */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 1 auto;
+}
+
+.contact-item p {
+    margin: 1px 0; /* Smaller margin between text lines */
+}
+
+.social-icons a {
+    color: #353458;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+/* About Page Main Layout */
+.about-main {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.about-header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header-section h1 {
+    font-size: 3em;
+    color: #b0c7f5;
+    margin-bottom: 10px;
+}
+
+.about-header-section p {
+    font-size: 1.2em;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills and Interests Section */
+.skills-section {
+    background-color: #353458;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.skills-section h2 {
+    color: #b0c7f5;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    background-color: #716d98;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.skill-item h3 {
+    color: #b0c7f5;
+    margin-bottom: 10px;
+}
+
+/* Experience Section */
+.experience-section {
+    background-color: #b0c7f5;
+    border-radius: 15px;
+    padding: 30px;
+    color: #353458;
+    text-align: center;
+}
+
+.experience-section h2 {
+    font-size: 2.5em;
+    color: #353458;
+    margin-bottom: 20px;
+}
+
+.experience-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main, .my-work-section, .projects-section, .additional-projects-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-section, .about-section, .work-content, .projects-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .my-work-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-content,
+    .projects-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main,
+    .my-work-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-section,
+    .about-section,
+    .work-content,
+    .projects-section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.gallery-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.gallery {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.gallery-image {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+
+.zoom-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-item:hover .zoom-icon {
+  opacity: 1;
+}
+
+.zoom-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.zoom-image {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 40px auto;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
